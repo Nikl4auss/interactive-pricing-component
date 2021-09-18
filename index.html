@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive pricing component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">Simple, traffic-based pricing</h1>
+      <p class="header__description">
+        Sign-up for our 30-day trial. No credit card required.
+      </p>
+    </header>
+    <main>
+      <section class="main-product">
+        <p class="main-product__pageviews">
+          <span class="main-product__pageviews-number"></span> Pageviews
+        </p>
+        <form>
+          <input
+            type="range"
+            class="main-product__range-slider"
+            min="0"
+            max="4"
+            step="1"
+          />
+          <p><span></span> /month</p>
+          <label for="toggle-button" class="toggle-button">
+            Monthly Billing
+            <input
+              type="checkbox"
+              name=""
+              id="toggle-button"
+              class="toggle-button__check"
+            />
+            Yearly Billing <span class="toggle-button__discount">-25%</span>
+          </label>
+          <span class="main-product__separator"></span>
+          <ul class="main-product__benefits">
+            <li class="main-product__benefits-item">Unlimited websites</li>
+            <li class="main-product__benefits-item">100% data ownership</li>
+            <li class="main-product__benefits-item">Email reports</li>
+          </ul>
+          <button type="button" class="main-product__button">
+            Start my trial
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
