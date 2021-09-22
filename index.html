@@ -11,7 +11,13 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>Frontend Mentor | Interactive pricing component</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -29,42 +35,58 @@
     <header class="header">
       <h1 class="header__title">Simple, traffic-based pricing</h1>
       <p class="header__description">
-        Sign-up for our 30-day trial. No credit card required.
+        Sign-up for our 30-day trial.<br />
+        No credit card required.
       </p>
     </header>
     <main>
       <section class="main-product">
-        <p class="main-product__pageviews">
-          <span class="main-product__pageviews-number"></span> Pageviews
-        </p>
-        <form>
-          <input
-            type="range"
-            class="main-product__range-slider"
-            min="0"
-            max="4"
-            step="1"
-          />
-          <p><span></span> /month</p>
-          <label for="toggle-button" class="toggle-button">
-            Monthly Billing
+        <form class="main-product__form">
+          <div class="main-product__price-container">
+            <p class="main-product__pageviews">
+              <span id="pageviews"></span> Pageviews
+            </p>
             <input
-              type="checkbox"
-              name=""
-              id="toggle-button"
-              class="toggle-button__check"
+              type="range"
+              class="main-product__range-slider"
+              id="range-slider"
+              min="0"
+              max="4"
+              step="1"
             />
-            Yearly Billing <span class="toggle-button__discount">-25%</span>
-          </label>
-          <span class="main-product__separator"></span>
-          <ul class="main-product__benefits">
-            <li class="main-product__benefits-item">Unlimited websites</li>
-            <li class="main-product__benefits-item">100% data ownership</li>
-            <li class="main-product__benefits-item">Email reports</li>
-          </ul>
-          <button type="button" class="main-product__button">
-            Start my trial
-          </button>
+            <p class="main-product__month">
+              <span class="main-product__price">$<span id="price"></span></span>
+              /month
+            </p>
+            <div class="toggle-button">
+              <p class="">Monthly Billing</p>
+              <label for="toggle-button__check" class="toggle-button__button">
+                <input
+                  type="checkbox"
+                  name=""
+                  id="toggle-button__check"
+                  class="toggle-button__check"
+                />
+                <span class="toggle-button__slider"></span>
+              </label>
+              <p>Yearly Billing</p>
+              <span class="toggle-button__discount"
+                >-25%
+                <span class="toggle-button__discount-text">discount</span></span
+              >
+            </div>
+          </div>
+          <span class="main-product__separation-bar"></span>
+          <div class="main-product__button-container">
+            <ul class="main-product__benefits">
+              <li class="main-product__benefits-item">Unlimited websites</li>
+              <li class="main-product__benefits-item">100% data ownership</li>
+              <li class="main-product__benefits-item">Email reports</li>
+            </ul>
+            <button type="button" class="main-product__button">
+              Start my trial
+            </button>
+          </div>
         </form>
       </section>
     </main>
@@ -73,7 +95,11 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by
+      <a href="https://www.github.com/nikl4auss" target="_blank"
+        >Nicolas Joel Marinelli</a
+      >.
     </div>
+    <script src="./js/index.js"></script>
   </body>
 </html>

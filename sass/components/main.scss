@@ -1,0 +1,184 @@
+@use '../colors' as *;
+@use './toggle.scss' as *;
+
+:root {
+  --grayish-blue-start: 50%;
+}
+
+.main-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  min-width: 32rem;
+  max-width: 60rem;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: $neutral-white;
+
+  &__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__price-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 1rem 0;
+    width: 90%;
+  }
+
+  &__pageviews {
+    margin: 2rem 0;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    color: $neutral-grayish-blue;
+    font-weight: 800;
+  }
+
+  &__range-slider {
+    margin: 2rem 0;
+    &::-webkit-slider-thumb {
+      margin-top: -1.5rem;
+      width: 4rem;
+      height: 4rem;
+      background-color: $primary-strong-cyan;
+      background-image: url(../../images/icon-slider.svg);
+      background-size: 50%;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 2rem 3rem hsla(175, 86%, 45%, 0.6);
+    }
+
+    &::-moz-range-thumb {
+      width: 4rem;
+      height: 4rem;
+      background-color: $primary-strong-cyan;
+      background-image: url(../../images/icon-slider.svg);
+      background-size: 50%;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 2rem 3rem hsla(174, 86%, 45%, 0.6);
+    }
+
+    &::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 0.8rem;
+      background: linear-gradient(
+        to right,
+        $primary-soft-cyan 0% var(--grayish-blue-start),
+        $neutral-light-grayish-blue var(--grayish-blue-start) 100%
+      );
+      border-radius: 30px;
+    }
+
+    &::-moz-range-track {
+      width: 100%;
+      height: 0.8rem;
+      background-color: $neutral-light-grayish-blue;
+      border: none;
+      border-radius: 30px;
+    }
+
+    &::-moz-range-progress {
+      height: 0.8rem;
+      background-color: $primary-soft-cyan;
+      border-radius: 30px;
+    }
+  }
+
+  &__month {
+    margin: 3rem 0;
+    color: $neutral-grayish-blue;
+    font-size: 1.6rem;
+  }
+
+  &__price {
+    color: $neutral-dark-desaturated-blue;
+    font-size: 4rem;
+    font-weight: 800;
+  }
+
+  &__separation-bar {
+    align-self: stretch;
+    width: 100%;
+    border-top: 1px solid $neutral-light-grayish-blue;
+  }
+
+  &__button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+    width: 90%;
+  }
+
+  &__benefits {
+    margin: 2rem 0 3rem;
+    list-style: none;
+    color: $neutral-grayish-blue;
+    font-size: 1.2rem;
+    font-weight: 800;
+
+    &-item {
+      margin-bottom: 1.5rem;
+
+      &::before {
+        content: url("../../images/icon-check.svg");
+        padding-right: 1rem;
+      }
+    }
+  }
+
+  &__button {
+    margin-bottom: 1rem;
+    padding: 1.5rem 4rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.4rem;
+    color: $primary-pale-blue;
+    background-color: $neutral-dark-desaturated-blue;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      color: $neutral-light-grayish-blue;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .main-product {
+    &__price-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &__pageviews {
+      order: 0;
+    }
+
+    &__month {
+      order: 1;
+    }
+
+    &__range-slider {
+      order: 2;
+    }
+
+    &__button-container {
+      flex-direction: row;
+    }
+  }
+}

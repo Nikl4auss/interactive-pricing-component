@@ -1,0 +1,49 @@
+@use '../colors' as *;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100vh;
+}
+
+body {
+  min-height: 100%;
+  font-family: "Monrope", sans-serif;
+  background-color: $neutral-very-pale-blue;
+  background-image: url("../images/bg-pattern.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% 60%;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
