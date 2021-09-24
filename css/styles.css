@@ -192,7 +192,7 @@ input[type=range]::-ms-track {
   margin-top: -1.5rem;
   width: 4rem;
   height: 4rem;
-  background-color: #a5f3eb;
+  background-color: #10d5c2;
   background-image: url(../../images/icon-slider.svg);
   background-size: 50%;
   background-position: center;
@@ -204,7 +204,7 @@ input[type=range]::-ms-track {
 .main-product__range-slider::-moz-range-thumb {
   width: 4rem;
   height: 4rem;
-  background-color: #a5f3eb;
+  background-color: #10d5c2;
   background-image: url(../../images/icon-slider.svg);
   background-size: 50%;
   background-position: center;
